@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Análise Combinatória – Guia Completo</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="style.css"
+            media="screen"
+        />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>
+            window.MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-content">
+                <a href="#topo" class="navbar-brand">Análise Combinatória</a>
+                <button
+                    class="navbar-toggle"
+                    aria-expanded="false"
+                    aria-controls="navbar-links"
+                >
+                    <span aria-hidden="true"></span>
+                    Menu
+                </button>
+                <div class="navbar-links" id="navbar-links">
+                    <a href="#principio">Princípio Multiplicativo</a>
+                    <a href="#permutacao">Permutação</a>
+                    <a href="#arranjo">Arranjo</a>
+                    <a href="#combinacao">Combinação</a>
+                    <a href="#pascal">Triângulo de Pascal</a>
+                    <a href="#tabela">Tabela Resumo</a>
+                    <a href="#flashcards">Flashcards</a>
+                </div>
+            </div>
+        </nav>
+        <div class="navbar-shadow" aria-hidden="true"></div>
+        <div class="container" id="topo">
+            <h1>Análise Combinatória – Guia Completo</h1>
+            <p>
+                Domine todos os tópicos da análise combinatória para sua prova!
+                Navegue pelos conteúdos, revise fórmulas e pratique com
+                flashcards interativos.
+            </p>
+
+            <h2 id="principio">Princípio Multiplicativo</h2>
+            <p>
+                O princípio multiplicativo é usado para calcular o número total
+                de possibilidades em situações encadeadas. Basta multiplicar o
+                número de opções de cada etapa.
+            </p>
+            <ul>
+                <li>
+                    <strong>Exemplo:</strong> Se você tem 3 camisas e 2 calças,
+                    pode formar <strong>6</strong> combinações diferentes:
+                    <span class="math-formula">$3 \times 2 = 6$</span>.
+                </li>
+            </ul>
+
+            <h2 id="permutacao">Permutação</h2>
+            <h3>Permutação Simples</h3>
+            <p>
+                Organizar todos os elementos, sem repetição, onde a ordem
+                importa.
+            </p>
+            <ul>
+                <li>
+                    <strong>Fórmula:</strong>
+                    <span class="math-formula">$n!$</span>
+                </li>
+                <li>
+                    <strong>Exemplo:</strong> 4 livros diferentes podem ser
+                    organizados de <strong>24</strong> formas:
+                    <span class="math-formula">$4! = 24$</span>.
+                </li>
+            </ul>
+            <h3>Permutação com Repetição</h3>
+            <p>Quando há elementos repetidos, usamos:</p>
+            <ul>
+                <li>
+                    <strong>Fórmula:</strong>
+                    <span class="math-formula">$\dfrac{n!}{a! \cdot b! \cdot c! \cdots}$</span>
+                </li>
+                <li>
+                    <strong>Exemplo:</strong> "SALADA" tem 6 letras, 3 'A':
+                    <span class="math-formula">$\dfrac{6!}{3!} = 120$</span>.
+                </li>
+            </ul>
+
+            <h2 id="arranjo">Arranjo</h2>
+            <h3>Arranjo Simples</h3>
+            <p>Seleciona parte dos elementos, ordem importa, sem repetição.</p>
+            <ul>
+                <li>
+                    <strong>Fórmula:</strong>
+                    <span class="math-formula">$A(n,p) = \dfrac{n!}{(n-p)!}$</span>
+                </li>
+                <li>
+                    <strong>Exemplo:</strong> 5 alunos, 2 cargos:
+                    <span class="math-formula">$A(5,2) = 5 \times 4 = 20$</span>.
+                </li>
+            </ul>
+            <h3>Arranjo com Repetição</h3>
+            <p>Seleciona parte dos elementos, ordem importa, com repetição.</p>
+            <ul>
+                <li>
+                    <strong>Fórmula:</strong>
+                    <span class="math-formula">$n^p$</span>
+                </li>
+                <li>
+                    <strong>Exemplo:</strong> 3 sabores, 2 bolas:
+                    <span class="math-formula">$3^2 = 9$</span>.
+                </li>
+            </ul>
+
+            <h2 id="combinacao">Combinação</h2>
+            <h3>Combinação Simples</h3>
+            <p>
+                Seleciona parte dos elementos, ordem não importa, sem repetição.
+            </p>
+            <ul>
+                <li>
+                    <strong>Fórmula:</strong>
+                    <span class="math-formula">$C(n,p) = \dfrac{n!}{p!(n-p)!}$</span>
+                </li>
+                <li>
+                    <strong>Exemplo:</strong> 5 alunos, duplas:
+                    <span class="math-formula">$C(5,2) = 10$</span>.
+                </li>
+            </ul>
+            <h3>Combinação com Repetição</h3>
+            <p>
+                Seleciona parte dos elementos, ordem não importa, com repetição.
+            </p>
+            <ul>
+                <li>
+                    <strong>Fórmula:</strong>
+                    <span class="math-formula">$C'(n,p) = \dfrac{(n+p-1)!}{p!(n-1)!}$</span>
+                </li>
+            </ul>
+
+            <h2 id="pascal">Triângulo de Pascal</h2>
+            <p>
+                O Triângulo de Pascal é uma ferramenta visual para calcular
+                combinações. Cada linha representa os coeficientes binomiais
+                <strong>C(n, p)</strong>. Exemplo: a linha 4 é
+                <strong>1, 4, 6, 4, 1</strong>, que corresponde a
+                <strong>C(4,0), C(4,1), C(4,2), C(4,3), C(4,4)</strong>.
+            </p>
+            <ul>
+                <li>
+                    Use o triângulo para encontrar rapidamente o número de
+                    combinações sem precisar calcular fatorial.
+                </li>
+            </ul>
+            <p>
+                <em>Dica:</em> Para montar a linha n, some os dois números acima
+                de cada posição.
+            </p>
+            <div class="pascal-triangle" aria-live="polite"></div>
+
+            <h2 id="tabela">Tabela Resumo</h2>
+            <div class="table-wrapper">
+                <table>
+                    <tr>
+                        <th>Tópico</th>
+                        <th>Conceito</th>
+                        <th>Fórmula</th>
+                    </tr>
+                    <tr>
+                        <td>Princípio Multiplicativo</td>
+                        <td>
+                            Multiplica as opções de cada etapa para obter o
+                            total de possibilidades.
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Permutação Simples</td>
+                        <td>
+                            Organizar todos os elementos, sem repetição, onde a
+                            ordem importa.
+                        </td>
+                        <td>$n!$</td>
+                    </tr>
+                    <tr>
+                        <td>Permutação com Repetição</td>
+                        <td>
+                            Organizar elementos com repetições, onde a ordem
+                            importa.
+                        </td>
+                        <td>$\dfrac{n!}{a! \cdot b! \cdot c! \cdots}$</td>
+                    </tr>
+                    <tr>
+                        <td>Arranjo Simples</td>
+                        <td>
+                            Selecionar parte dos elementos, ordem importa, sem
+                            repetição.
+                        </td>
+                        <td>$A(n,p) = \dfrac{n!}{(n-p)!}$</td>
+                    </tr>
+                    <tr>
+                        <td>Arranjo com Repetição</td>
+                        <td>
+                            Selecionar parte dos elementos, ordem importa, com
+                            repetição.
+                        </td>
+                        <td>$n^p$</td>
+                    </tr>
+                    <tr>
+                        <td>Combinação</td>
+                        <td>
+                            Selecionar parte dos elementos, ordem não importa,
+                            sem repetição.
+                        </td>
+                        <td>$C(n,p) = \dfrac{n!}{p!(n-p)!}$</td>
+                    </tr>
+                    <tr>
+                        <td>Combinação com Repetição</td>
+                        <td>
+                            Selecionar parte dos elementos, ordem não importa,
+                            com repetição.
+                        </td>
+                        <td>$C'(n,p) = \dfrac{(n+p-1)!}{p!(n-1)!}$</td>
+                    </tr>
+                    <tr>
+                        <td>Triângulo de Pascal</td>
+                        <td>
+                            Ferramenta para calcular rapidamente combinações e
+                            visualizar padrões.
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+
+            <h2 id="flashcards">Flashcards</h2>
+            <div class="flashcard-section">
+                <div
+                    class="flashcard"
+                    tabindex="0"
+                    role="button"
+                    aria-pressed="false"
+                >
+                    <div class="question">O que é permutação simples?</div>
+                    <div class="answer">
+                        É a organização de todos os elementos distintos, onde a
+                        ordem importa. Fórmula: <span class="math-formula">$n!$</span>
+                    </div>
+                    <div class="show-answer">Clique para ver a resposta</div>
+                </div>
+                <div
+                    class="flashcard"
+                    tabindex="0"
+                    role="button"
+                    aria-pressed="false"
+                >
+                    <div class="question">
+                        Como calcular arranjo simples de n elementos tomados p a
+                        p?
+                    </div>
+                    <div class="answer">
+                        Use a fórmula: <span class="math-formula">$A(n,p) = \dfrac{n!}{(n-p)!}$</span>
+                    </div>
+                    <div class="show-answer">Clique para ver a resposta</div>
+                </div>
+                <div
+                    class="flashcard"
+                    tabindex="0"
+                    role="button"
+                    aria-pressed="false"
+                >
+                    <div class="question">Quando usar combinação?</div>
+                    <div class="answer">
+                        Quando a ordem dos elementos não importa e não há
+                        repetição. Fórmula:
+                        <span class="math-formula">$C(n,p) = \dfrac{n!}{p!(n-p)!}$</span>
+                    </div>
+                    <div class="show-answer">Clique para ver a resposta</div>
+                </div>
+                <div
+                    class="flashcard"
+                    tabindex="0"
+                    role="button"
+                    aria-pressed="false"
+                >
+                    <div class="question">
+                        Qual a diferença entre arranjo e combinação?
+                    </div>
+                    <div class="answer">
+                        No arranjo, a ordem importa; na combinação, não importa.
+                    </div>
+                    <div class="show-answer">Clique para ver a resposta</div>
+                </div>
+                <div
+                    class="flashcard"
+                    tabindex="0"
+                    role="button"
+                    aria-pressed="false"
+                >
+                    <div class="question">
+                        Como calcular permutação com repetição?
+                    </div>
+                    <div class="answer">
+                        Use: <span class="math-formula">$\dfrac{n!}{a! \cdot b! \cdot c! \cdots}$</span>, onde a, b, c...
+                        são as repetições de cada elemento.
+                    </div>
+                    <div class="show-answer">Clique para ver a resposta</div>
+                </div>
+                <div
+                    class="flashcard"
+                    tabindex="0"
+                    role="button"
+                    aria-pressed="false"
+                >
+                    <div class="question">
+                        Qual a fórmula do arranjo com repetição?
+                    </div>
+                    <div class="answer">
+                        É <span class="math-formula">$n^p$</span>, onde n é o número de opções e p
+                        o número de escolhas.
+                    </div>
+                    <div class="show-answer">Clique para ver a resposta</div>
+                </div>
+                <div
+                    class="flashcard"
+                    tabindex="0"
+                    role="button"
+                    aria-pressed="false"
+                >
+                    <div class="question">
+                        Para que serve o Triângulo de Pascal?
+                    </div>
+                    <div class="answer">
+                        Para calcular rapidamente combinações e visualizar
+                        padrões binomiais.
+                    </div>
+                    <div class="show-answer">Clique para ver a resposta</div>
+                </div>
+                <div
+                    class="flashcard"
+                    tabindex="0"
+                    role="button"
+                    aria-pressed="false"
+                >
+                    <div class="question">
+                        Como calcular combinação com repetição?
+                    </div>
+                    <div class="answer">
+                        Use: <span class="math-formula">$C'(n,p) = \dfrac{(n+p-1)!}{p!(n-1)!}$</span>
+                    </div>
+                    <div class="show-answer">Clique para ver a resposta</div>
+                </div>
+                <div
+                    class="flashcard"
+                    tabindex="0"
+                    role="button"
+                    aria-pressed="false"
+                >
+                    <div class="question">
+                        Quando usar o princípio multiplicativo?
+                    </div>
+                    <div class="answer">
+                        Quando há etapas independentes e você quer o total de
+                        possibilidades multiplicando as opções de cada etapa.
+                    </div>
+                    <div class="show-answer">Clique para ver a resposta</div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const navbarToggle = document.querySelector('.navbar-toggle');
+            const navbarLinks = document.getElementById('navbar-links');
+
+            if (navbarToggle && navbarLinks) {
+                const closeMenu = () => {
+                    navbarLinks.classList.remove('open');
+                    navbarToggle.setAttribute('aria-expanded', 'false');
+                };
+
+                navbarToggle.addEventListener('click', () => {
+                    const isOpen = navbarLinks.classList.toggle('open');
+                    navbarToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+                navbarLinks.addEventListener('click', event => {
+                    if (event.target.matches('a')) {
+                        closeMenu();
+                    }
+                });
+            }
+
+            const flashcards = document.querySelectorAll('.flashcard');
+
+            const toggleFlashcard = card => {
+                const isActive = card.classList.toggle('active');
+                card.setAttribute('aria-pressed', isActive);
+            };
+
+            flashcards.forEach(card => {
+                card.addEventListener('click', () => toggleFlashcard(card));
+                card.addEventListener('keydown', event => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        toggleFlashcard(card);
+                    }
+                });
+            });
+
+            const pascalTriangleContainer =
+                document.querySelector('.pascal-triangle');
+
+            const createPascalTriangle = (rows = 8) => {
+                if (!pascalTriangleContainer) return;
+                pascalTriangleContainer.innerHTML = '';
+
+                for (let n = 0; n <= rows; n++) {
+                    const row = document.createElement('div');
+                    row.className = 'pascal-row';
+
+                    const label = document.createElement('span');
+                    label.className = 'pascal-label';
+                    label.textContent = `linha ${n}`;
+                    row.appendChild(label);
+
+                    const valuesWrapper = document.createElement('div');
+                    valuesWrapper.className = 'pascal-values';
+
+                    for (let k = 0; k <= n; k++) {
+                        const value = document.createElement('span');
+                        value.className = 'pascal-value';
+                        value.innerHTML = `
+            <span class="pascal-paren">(</span>
+            <span class="pascal-number">
+              <span class="pascal-top">${n}</span>
+              <span class="pascal-bottom">${k}</span>
+            </span>
+            <span class="pascal-paren">)</span>
+          `;
+                        valuesWrapper.appendChild(value);
+                    }
+
+                    row.appendChild(valuesWrapper);
+                    pascalTriangleContainer.appendChild(row);
+                }
+            };
+
+            createPascalTriangle(8);
+        </script>
+    </body>
+</html>
