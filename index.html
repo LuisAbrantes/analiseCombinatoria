@@ -11,12 +11,22 @@
             media="screen"
         />
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script
+            id="MathJax-script"
+            async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+        ></script>
         <script>
             window.MathJax = {
                 tex: {
-                    inlineMath: [['$', '$'], ['\\(', '\\)']],
-                    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+                    inlineMath: [
+                        ['$', '$'],
+                        ['\\(', '\\)']
+                    ],
+                    displayMath: [
+                        ['$$', '$$'],
+                        ['\\[', '\\]']
+                    ]
                 }
             };
         </script>
@@ -89,7 +99,9 @@
             <ul>
                 <li>
                     <strong>Fórmula:</strong>
-                    <span class="math-formula">$\dfrac{n!}{a! \cdot b! \cdot c! \cdots}$</span>
+                    <span class="math-formula"
+                        >$\dfrac{n!}{a! \cdot b! \cdot c! \cdots}$</span
+                    >
                 </li>
                 <li>
                     <strong>Exemplo:</strong> "SALADA" tem 6 letras, 3 'A':
@@ -103,11 +115,14 @@
             <ul>
                 <li>
                     <strong>Fórmula:</strong>
-                    <span class="math-formula">$A(n,p) = \dfrac{n!}{(n-p)!}$</span>
+                    <span class="math-formula"
+                        >$A(n,p) = \dfrac{n!}{(n-p)!}$</span
+                    >
                 </li>
                 <li>
                     <strong>Exemplo:</strong> 5 alunos, 2 cargos:
-                    <span class="math-formula">$A(5,2) = 5 \times 4 = 20$</span>.
+                    <span class="math-formula">$A(5,2) = 5 \times 4 = 20$</span
+                    >.
                 </li>
             </ul>
             <h3>Arranjo com Repetição</h3>
@@ -131,7 +146,9 @@
             <ul>
                 <li>
                     <strong>Fórmula:</strong>
-                    <span class="math-formula">$C(n,p) = \dfrac{n!}{p!(n-p)!}$</span>
+                    <span class="math-formula"
+                        >$C(n,p) = \dfrac{n!}{p!(n-p)!}$</span
+                    >
                 </li>
                 <li>
                     <strong>Exemplo:</strong> 5 alunos, duplas:
@@ -145,7 +162,9 @@
             <ul>
                 <li>
                     <strong>Fórmula:</strong>
-                    <span class="math-formula">$C'(n,p) = \dfrac{(n+p-1)!}{p!(n-1)!}$</span>
+                    <span class="math-formula"
+                        >$C'(n,p) = \dfrac{(n+p-1)!}{p!(n-1)!}$</span
+                    >
                 </li>
             </ul>
 
@@ -255,7 +274,8 @@
                     <div class="question">O que é permutação simples?</div>
                     <div class="answer">
                         É a organização de todos os elementos distintos, onde a
-                        ordem importa. Fórmula: <span class="math-formula">$n!$</span>
+                        ordem importa. Fórmula:
+                        <span class="math-formula">$n!$</span>
                     </div>
                     <div class="show-answer">Clique para ver a resposta</div>
                 </div>
@@ -270,7 +290,10 @@
                         p?
                     </div>
                     <div class="answer">
-                        Use a fórmula: <span class="math-formula">$A(n,p) = \dfrac{n!}{(n-p)!}$</span>
+                        Use a fórmula:
+                        <span class="math-formula"
+                            >$A(n,p) = \dfrac{n!}{(n-p)!}$</span
+                        >
                     </div>
                     <div class="show-answer">Clique para ver a resposta</div>
                 </div>
@@ -284,7 +307,9 @@
                     <div class="answer">
                         Quando a ordem dos elementos não importa e não há
                         repetição. Fórmula:
-                        <span class="math-formula">$C(n,p) = \dfrac{n!}{p!(n-p)!}$</span>
+                        <span class="math-formula"
+                            >$C(n,p) = \dfrac{n!}{p!(n-p)!}$</span
+                        >
                     </div>
                     <div class="show-answer">Clique para ver a resposta</div>
                 </div>
@@ -312,8 +337,10 @@
                         Como calcular permutação com repetição?
                     </div>
                     <div class="answer">
-                        Use: <span class="math-formula">$\dfrac{n!}{a! \cdot b! \cdot c! \cdots}$</span>, onde a, b, c...
-                        são as repetições de cada elemento.
+                        Use:
+                        <span class="math-formula"
+                            >$\dfrac{n!}{a! \cdot b! \cdot c! \cdots}$</span
+                        >, onde a, b, c... são as repetições de cada elemento.
                     </div>
                     <div class="show-answer">Clique para ver a resposta</div>
                 </div>
@@ -327,8 +354,8 @@
                         Qual a fórmula do arranjo com repetição?
                     </div>
                     <div class="answer">
-                        É <span class="math-formula">$n^p$</span>, onde n é o número de opções e p
-                        o número de escolhas.
+                        É <span class="math-formula">$n^p$</span>, onde n é o
+                        número de opções e p o número de escolhas.
                     </div>
                     <div class="show-answer">Clique para ver a resposta</div>
                 </div>
@@ -357,7 +384,10 @@
                         Como calcular combinação com repetição?
                     </div>
                     <div class="answer">
-                        Use: <span class="math-formula">$C'(n,p) = \dfrac{(n+p-1)!}{p!(n-1)!}$</span>
+                        Use:
+                        <span class="math-formula"
+                            >$C'(n,p) = \dfrac{(n+p-1)!}{p!(n-1)!}$</span
+                        >
                     </div>
                     <div class="show-answer">Clique para ver a resposta</div>
                 </div>
